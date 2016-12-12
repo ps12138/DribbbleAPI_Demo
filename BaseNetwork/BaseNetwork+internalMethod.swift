@@ -20,14 +20,29 @@ extension BaseNetwork {
     }
     
     // MARK: - reachability internal method
-    internal func implementStartReachListener(host: String?) {
+    internal func implementStartReachListener(
+        host: String?,
+        callBack: @escaping (NetworkReachability
+    ) -> Void) {
         guard let urlString = host else {
             return
         }
-        self.netReachManager = NetworkReachabilityManager(host: urlString)
-        self.netReachManager?.listener = {
+        netReachManager = NetworkReachabilityManager(host: urlString)
+        netReachManager?.listener = {
             status in
             print("BaseNetwork: Network Status Changed: \(status)")
+            switch status {
+            case .reachable(let type):
+                if type == NetworkReachabilityManager.ConnectionType.wwan {
+                    callBack(.online(.cell))
+                } else {
+                    callBack(.online(.wifi))
+                }
+            case .notReachable:
+                callBack(.offline)
+            default:
+                callBack(.unknown)
+            }
         }
         netReachManager?.startListening()
         print("BaseNetwork: listening \(urlString)")
@@ -38,6 +53,45 @@ extension BaseNetwork {
         print("BaseNetwork: stop listening")
         
     }
+    
+    // MARK: - perform download with progress
+    internal func implementPerform(
+        downloadFrom url: String,
+        progress progressCallBack: ((Double) -> Void)? = nil,
+        data dataCallBack: ((Data?) -> Void)?
+    ){
+        alamofireManager.download(url)
+            .downloadProgress {
+                progressStatus in
+                progressCallBack?(progressStatus.fractionCompleted)
+            }
+            .responseData {responseReceived in
+              dataCallBack?(responseReceived.result.value)
+        }
+    }
+
+    // MARK: - perform download with qos progress
+    internal func implementPerform(
+        downloadFrom url: String,
+        progressInQos progressCallBack: ((Double) -> Void)?,
+        data dataCallBack: ((Data?) -> Void)?
+        ){
+        // using qos queue to take progress
+        let utilityQueue = DispatchQueue.global(qos: .utility)
+        alamofireManager.download(url)
+            .downloadProgress(queue: utilityQueue) {
+                progress in
+                progressCallBack?(progress.fractionCompleted)
+            }
+            .responseData {response in
+                dataCallBack?(response.result.value)
+        }
+    }
+    
+    
+    
+    
+    
     
     // MARK: - perform request internal method
     internal func implementPerform(

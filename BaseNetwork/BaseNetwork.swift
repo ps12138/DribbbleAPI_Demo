@@ -10,6 +10,7 @@ import Foundation
 import Alamofire
 
 
+
 open class BaseNetwork {
     
     // create alamofire session manager instance

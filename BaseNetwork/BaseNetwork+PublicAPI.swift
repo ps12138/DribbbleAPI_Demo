@@ -18,13 +18,45 @@ extension BaseNetwork {
     }
     
     // MARK: - Network Reachability Manager
-    public func startReachListener(host: String?) {
-        implementStartReachListener(host: host)
+    public func startReachListener(
+        host: String?,
+        callBack: @escaping (NetworkReachability) -> Void
+    ) {
+        implementStartReachListener(host: host, callBack: callBack)
     }
     
     public func stopReachListener() {
         implementstopReachListener()
     }
+    
+    // MARK: - download with progress
+    public func perform(
+        downloadFrom url: String,
+        progress progressCallBack: ((Double) -> Void)? = nil,
+        data dataCallBack: ((Data?) -> Void)?
+    ) {
+        implementPerform(
+            downloadFrom: url,
+            progress: progressCallBack,
+            data: dataCallBack
+        )
+    }
+    
+    // MARK: - download with qos progress
+    public func perform(
+        downloadFrom url: String,
+        progressInQos progressCallBack: ((Double) -> Void)? = nil,
+        data dataCallBack: ((Data?) -> Void)?
+    ) {
+        implementPerform(
+            downloadFrom: url,
+            progressInQos: progressCallBack,
+            data: dataCallBack
+        )
+    }
+    
+    
+    
     
     // MARK: - perform request from URL
     public func perform(
