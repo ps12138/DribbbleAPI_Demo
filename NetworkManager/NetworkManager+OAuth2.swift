@@ -203,8 +203,8 @@ extension NetworkManager {
     fileprivate struct OAuth2Constants {
         
         // client key pair
-        static let clientID = "6945370a2e285efd2e79515a61fc0dc630c0ba98667212ae1ff5591596518bf5"
-        static let clientSecret = "90c086a8473070e7a8932b88991012e06c84d411e9c9c80079a09a353cc28699"
+        static let clientID = ""
+        static let clientSecret = ""
         
         // callBack prefix
         static let callBackPrefix = ""
