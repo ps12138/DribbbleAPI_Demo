@@ -31,4 +31,8 @@ public class NetworkManager {
         static let markRequestingToken = "loadingOAuthToken"
         static let apiBase = "https://api.dribbble.com"
     }
+    // MARK: - public key
+    internal struct Scheme {
+        static let callBackPrefix = "driapicallback"
+    }
 }

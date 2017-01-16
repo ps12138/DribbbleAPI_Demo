@@ -25,7 +25,7 @@ extension ParseJson {
             print("ParseJson: fails on json -> Array")
             return shotBlocks
         }
-        print("ParseJson: ready to read \(jsonArray.count)")
+        //print("ParseJson: ready to read \(jsonArray.count)")
         for row in jsonArray {
             if let dict = row as? Dictionary<String, AnyObject> {
                 // convert to obj
@@ -56,7 +56,7 @@ extension ParseJson {
             return shotBlocks
         }
         
-        print("ParseJson: ready to read \(jsonArray.count)")
+        //print("ParseJson: ready to read \(jsonArray.count)")
         parseArray(toBlocks: jsonArray, shotBlocks: &shotBlocks)
         return shotBlocks
     }

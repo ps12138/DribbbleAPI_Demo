@@ -14,9 +14,7 @@ extension BaseNetwork {
     
     // MARK: - token internal method
     internal func implementUpdateToken(_ token: String?) {
-        if let tokenString = token {
-            alamofireManager.adapter = AccessTokenAdapter(accessToken: tokenString)
-        }
+        alamofireManager.adapter = AccessTokenAdapter(accessToken: token)
     }
     
     // MARK: - reachability internal method
@@ -143,8 +141,8 @@ extension BaseNetwork {
     
     internal func implementPerform(
         request: URLRequest,
-        failure: ((Error?, DataResponse<Data>?) -> Void)? = nil,
-        success: ((Data?) -> Void)?
+        success: ((Data?) -> Void)?,
+        failure: ((Error?) -> Void)? = nil
     ) {
         // perform request and handle result
         alamofireManager.request(request)
@@ -152,32 +150,64 @@ extension BaseNetwork {
             .responseData { response in
                 if let error = response.result.error {
                     let doFailure = failure ?? self.handleFailure
-                    doFailure(error, response)
+                    doFailure(error)
                 } else {
                     success?(response.result.value)
                 }
         }// closure
     }
-
+    
+    
+    internal func implementPerform(
+        testRequest: URLRequest,
+        success: ((Data?) -> Void)?,
+        failure: ((Error?) -> Void)? = nil
+        ) {
+        // perform request and handle result
+        alamofireManager.request(testRequest)
+            .validate(statusCode: 200..<300)
+            .responseData { response in
+                if let error = response.result.error {
+                    let doFailure = failure ?? self.handleFailure
+                    
+                    print("BaseN: request : \n\(response.request)")
+                    print("BaseN: data : \n\(response.result.value)")
+                    
+                    doFailure(error)
+                } else {
+                    success?(response.result.value)
+                }
+        }// closure
+    }
+    
+    
+    
+    
+    internal func handleFailure(_ errorString: Error?) {
+        if let error = errorString {
+            print("BaseN: error \(error)")
+        }
+    }
+    
     internal func handleFailure(_ errorString: Error?, _ response: DataResponse<String>?) {
         
         if let error = errorString {
-            print("Error: \(error)")
+            print("BaseN: error \(error)")
         }
         if let responseArray = response {
-            print("HandleFailure : Request : \n\(responseArray.request)")
-            print("HandleFailure : Data : \n\(responseArray.result.value)")
+            print("BaseN: request : \n\(responseArray.request)")
+            print("BaseN: data : \n\(responseArray.result.value)")
         }
     }
     
     internal func handleFailure(_ errorString: Error?, _ response: DataResponse<Data>?) {
         
         if let error = errorString {
-            print("Error: \(error)")
+            print("BaseN: error \(error)")
         }
         if let responseArray = response {
-            print("HandleFailure : Request : \n\(responseArray.request)")
-            print("HandleFailure : Data : \n\(responseArray.result.value)")
+            print("BaseN: request : \n\(responseArray.request)")
+            print("BaseN: data : \n\(responseArray.result.value)")
         }
     }    
 }

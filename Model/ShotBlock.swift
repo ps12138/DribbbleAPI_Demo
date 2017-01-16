@@ -9,6 +9,8 @@
 import Foundation
 
 open class ShotBlock {
+    
+    // MARK: - Variables
     // image property
     open let id: Int
     open let title: String
@@ -33,6 +35,7 @@ open class ShotBlock {
     open var user: User?
     open var descBody: DescriptionBody?
     
+    // MARK: - Init
     init?(dict: Dictionary<String, AnyObject>?) {
         guard
             let id = dict?[ShotKey.id] as? Int,
@@ -52,7 +55,7 @@ open class ShotBlock {
             return nil
         }
         self.id = id
-        self.title = (dict?[ShotKey.title] as? String) ?? ""
+        self.title = (dict?[ShotKey.title] as? String) ?? "No Title"
         self.desc = (dict?[ShotKey.description] as? String) ?? "No Description"
         
         self.width = width
@@ -70,6 +73,7 @@ open class ShotBlock {
         self.user = User(dict: dict?[ShotKey.user] as? Dictionary<String, AnyObject>)
     }
     
+    // dict is parsed dict[html-key: String]
     public func translateDescBody(dict: Dictionary<String, AnyObject>?) {
         self.descBody = DescriptionBody(dict: dict)
     }

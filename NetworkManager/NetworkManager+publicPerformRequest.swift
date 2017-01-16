@@ -14,47 +14,7 @@ extension NetworkManager {
         static let base = "https://api.dribbble.com/v1/"
     }
 
-
-    // MARK: - formRequestFromSelectByPage
-    public func formRequestFromSelectByPage(
-        _ method: String,
-        path: String,
-        param: Dictionary<String, String>
-    ) -> URLRequest {
-        
-        // form url
-        let url = URL(string: "\(UrlConstants.base)\(path)")!
-        var request = URLRequest(url: url)
-        
-        // form httpmethod
-        request.httpMethod = method
-        
-        // form paramters
-        do {
-            request.httpBody = try JSONSerialization.data(withJSONObject: param, options: [])
-        } catch {
-            print("NetM.perfromR: fail to form httpBody")
-        }
-        print("selectByPage url: \(request.url)")
-        return request
-    }
-    
-    // MARK: - formRequestFromSelectByPage
-    public func formRequestFromSelectByPage(_ method: String, path: String) -> URLRequest {
-        
-        // form url
-        let url = URL(string: "\(NetworkManager.UrlConstants.base)\(path)")!
-        var request = URLRequest(url: url)
-        
-        // form httpmethod
-        request.httpMethod = method
-        
-        // form paramters
-        print("NetM.perfromR: form selectByPage url: \(request.url)")
-        return request
-    }
-    
-    
+    // MARK: - perform request for shots list
     public func performRequest(request: URLRequest, _ success: @escaping ([ShotBlock])->Void) {
         print("NetM.perfromR: perform request")
         baseNetwork.performRequest(request: request) {
@@ -65,23 +25,27 @@ extension NetworkManager {
         }
     }
     
-    // --------------------------------------------------------
-    // MARK: - form request for given Api
-    public func formRequest(_ method: String, urlString: String) -> URLRequest? {
+    public func performRequest(
+        request: URLRequest,
+        _ success: @escaping ([ShotBlock])->Void,
+        _ failure: @escaping (Error)->Void) {
+        print("NetM.perfromR: perform request")
         
-        // form url
-        guard let url = URL(string: "\(urlString)") else {
-            print("NetM.perfromR: unvalid urlString")
-            return nil
-        }
-        var request = URLRequest(url: url)
-        
-        // form httpmethod
-        request.httpMethod = method
-        
-        // form paramters
-        print("NetM.perfromR: form request url: \(request.url!)")
-        return request
+        baseNetwork.perform(
+            request: request,
+            success: { results in
+                print("NetM.perfrom: Json get")
+                let blocks = self.parseJson.parse(listShot:results)
+                success(blocks)
+            },
+            failure: { error in
+                if let error = error {
+                    failure(error)
+                    return
+                }
+                print("NetM.perfrom: unknown error")
+            }
+        )
     }
     
     // --------------------------------------------------------

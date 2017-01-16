@@ -99,21 +99,35 @@ extension BaseNetwork {
     ) {
         implementPerform(
             request: request,
-            failure: nil,
-            success: success
+            success: success,
+            failure: nil
         )
     }
     
     // with handle failure error/errorData and success
     public func perform(
         request: URLRequest,
-        failure: ((Error?, DataResponse<Data>?) -> Void)? = nil,
-        success: ((Data?) -> Void)?
+        success: ((Data?) -> Void)?,
+        failure: ((Error?) -> Void)? = nil
     ) {
         implementPerform(
             request: request,
-            failure: failure,
-            success: success
+            success: success,
+            failure: failure
         )
     }
+    
+    // for test request
+    public func perform(
+        testRequest: URLRequest,
+        success: ((Data?) -> Void)?,
+        failure: ((Error?) -> Void)? = nil
+        ) {
+        implementPerform(
+            request: testRequest,
+            success: success,
+            failure: failure
+        )
+    }
+
 }

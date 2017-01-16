@@ -15,7 +15,7 @@ open class User {
     open let html_url: String?
     open let avatar_url: String?
     open let bio: String?
-    open let location: String?
+    open let location: String
     
     open let linkDict: Dictionary<String, String>?
     open var linkArray: [(title: String, urlString: String)]?
@@ -33,6 +33,7 @@ open class User {
     
     init?(dict: Dictionary<String, AnyObject>?) {
         guard let id = dict?[UserKey.id] as? Int,
+            let userName = dict?[UserKey.username] as? String,
             let buckets_count = dict?[UserKey.buckets_count] as? Int,
             let comments_received_count = dict?[UserKey.comments_received_count] as? Int,
             let followers_count = dict?[UserKey.followers_count] as? Int,
@@ -48,11 +49,11 @@ open class User {
         }
         self.id = id
         self.name = dict?[UserKey.name] as? String
-        self.userName = dict?[UserKey.username] as? String
+        self.userName = userName
         self.html_url = dict?[UserKey.html_url] as? String
         self.avatar_url = dict?[UserKey.avatar_url] as? String
         self.bio = dict?[UserKey.bio] as? String
-        self.location = dict?[UserKey.location] as? String
+        self.location = (dict?[UserKey.location] as? String) ?? "unknown"
         
         self.linkDict = dict?[UserKey.links] as? Dictionary<String, String>
         

@@ -12,43 +12,10 @@ import SwiftyJSON
 // MARK: - OAuth2 flow
 extension NetworkManager {
 
-    // MARK: - OAuth request begin
-    public func markRequestingToken() {
-        let defaults = UserDefaults.standard
-        defaults.set(true, forKey: Constants.markRequestingToken)
-    }
-    
-    public func clearMarkRequestingToken() {
-        let defaults = UserDefaults.standard
-        defaults.set(false, forKey: Constants.markRequestingToken)
-    }
-    
-    // MARK: - Check whether we have OAuth Token
-    public func hasOAuthToken() -> Bool {
-        // TODO: implement
-        guard let token = accessToken else{
-            return false
-        }
-        if token.isEmpty {
-            return false
-        }
-        return true
-    }
-    
-    public func clearOAuthToken() {
-        if accessToken != nil {
-            accessToken = nil
-        }
-    }
-
-    
-    
-    
-    
     // MARK: - OAuth2 flow
-    public func URLToStartOAuth2Login() -> NSURL? {
+    public func URLToStartOAuth2Login() -> URL? {
         let authPath = "\(OAuth2Constants.oauthLogin)?client_id=\(OAuth2Constants.clientID)&scope=\(OAuth2Constants.scope)"
-        guard let authURL:NSURL = NSURL(string: authPath) else {
+        guard let authURL: URL = URL(string: authPath) else {
             // url: handle error
             print("NetM.OAuth2: wrong Oauth url")
             assert(true)
@@ -59,7 +26,7 @@ extension NetworkManager {
     
     
     
-    // handle call back url
+    // MARK: - handle call back url
     public func processOAuthResponseCallBackURL(url: URL) {
         // format of we get the call back
         print("NetM.OAuth2: CallBack, URL")
@@ -82,13 +49,22 @@ extension NetworkManager {
             requestToken(withCode: receivedCode)
         } else {
             print("NetM.OAuth2: No code")
-            clearMarkRequestingToken()
+            //clearMarkRequestingToken()
             // TODO: retry login
+            
+            // Did: post accessToken notification
+            NotificationManager.sharedInstance.post(accessTokenEvent: false)
         }
         
     }
     
+    // MARK: - internal methods
+    internal func implementUsePublicAccessToken() {
+        accessToken = OAuth2Constants.publicToken
+    }
     
+    
+    // MARK: - private methods
     // MARK: request access token with code
     private func requestToken(withCode receivedCode: String) {
         
@@ -107,6 +83,7 @@ extension NetworkManager {
         )
     }
     
+    // MARK: - handle success
     private func handleSuccessRequestToken(_ value: String?) {
         //print(response.result.value)
         if let receivedResults = value,
@@ -141,19 +118,23 @@ extension NetworkManager {
             }
         }
         // finished loading Token
-        clearMarkRequestingToken()
+        //clearMarkRequestingToken()
         
         if (hasOAuthToken()) {
             //self.printUser()
             baseNetwork.updateToken(accessToken)
-            //ActiveUser.sharedInstance.getActiveUser()
+            NotificationManager.sharedInstance.post(accessTokenEvent: true)
         } else {
             // TODO: handle no OAuth
             // TODO: test reachability to retry or keep offline
+            
+            // Did: post accessToken notification
+            NotificationManager.sharedInstance.post(accessTokenEvent: false)
         }
         
     }
     
+    // MARK: - handle fail
     private func handleFailRequestToken(_ error: Error?, value: String?) {
         if let errorString = error {
             print("Error: request token \(errorString)")
@@ -161,53 +142,20 @@ extension NetworkManager {
         if let receivedString = value {
             print("Received: \(receivedString)")
         }
+        // Did: post accessToken notification
+        NotificationManager.sharedInstance.post(accessTokenEvent: false)
+        
         // TODO: auto retry
     }
     
-    
-    // create accessToken
-    public var accessToken: String? {
-        set {
-            // if newValue is valid
-            if let valueToSave = newValue {
-                do {
-                    // lets update it
-                    print("KeyChain: update accessToken")
-                    try KeyChainManager.sharedInstance.updateData(data: ["token": valueToSave], forUserAccount: KeyChainUserAccount.OAuth2AccessToken)
-                } catch {
-                    print("KeyChain: fail to save the key")
-                    // if fail to update, we delete it
-                    let _ = try? KeyChainManager.sharedInstance.deleteDataForUserAccount(userAccount: KeyChainUserAccount.OAuth2AccessToken)
-                }
-            } else {
-                // they set it to nil, so delete it
-                let _ = try? KeyChainManager.sharedInstance.deleteDataForUserAccount(userAccount: KeyChainUserAccount.OAuth2AccessToken)
-                print("KeyChain: clear accessToken")
-                //print("KeyChain: Re-request accessToken")
-                //requestOAuth2();
-            }
-        }
-        
-        get {
-            // try to load from keychain
-            let dictionary = KeyChainManager.sharedInstance.loadDataForUserAccount(userAccount: KeyChainUserAccount.OAuth2AccessToken)
-            if let token = dictionary?["token"] as? String {
-                print("Action: retrived key")
-                return token
-            }
-            return nil
-        }
-    }
     
     // MARK: - constants for OAuth2
     fileprivate struct OAuth2Constants {
         
         // client key pair
-        static let clientID = ""
-        static let clientSecret = ""
-        
-        // callBack prefix
-        static let callBackPrefix = ""
+        static let clientID = "6945370a2e285efd2e79515a61fc0dc630c0ba98667212ae1ff5591596518bf5"
+        static let clientSecret = "90c086a8473070e7a8932b88991012e06c84d411e9c9c80079a09a353cc28699"
+        static let publicToken = "37ddfc23b82ae5cfc673bc92770caf17272407d0d07bce3c1840fc993a509667"
         
         // auth API url
         static let requestToken = "https://dribbble.com/oauth/token"

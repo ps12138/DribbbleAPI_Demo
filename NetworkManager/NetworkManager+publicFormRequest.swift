@@ -20,7 +20,6 @@ extension NetworkManager {
         var httpMethod: String? {
             return formHttpMethod(from)
         }
-        
         var httpBody: Data? {
             switch from {
             case .createComment( _, let content):
@@ -28,6 +27,9 @@ extension NetworkManager {
             default:
                 return nil
             }
+        }
+        var cachePolicy: URLRequest.CachePolicy {
+            return formCachePolicy(from)
         }
         
         guard
@@ -42,7 +44,7 @@ extension NetworkManager {
         // form request
         var request = URLRequest(url: url)
         request.httpMethod = httpMethod
-        
+        request.cachePolicy = cachePolicy
         // add body
         request.httpBody = httpBody
         
@@ -51,7 +53,15 @@ extension NetworkManager {
     }
     
     // MARK: - Api constant
+    fileprivate struct DefaultCons {
+        static let perPageInt = 12
+        static let sortString = ""
+    }
+    
+    
+    
     fileprivate struct Api {
+        
         static let base = "\(Constants.apiBase)/v1/"
         static let shots = "shots/"
         static let like = "like"
@@ -66,9 +76,28 @@ extension NetworkManager {
         
         static let comments = "comments"
         static let page = "?page="
+        static let perPage = "&per_page="
+        
+        static let paraBegin = "?"
+        static let paraBetween = "&"
     }
 
     // MARK: - Private method
+    
+    // custom CachePolicy
+    private func formCachePolicy(_ from: DribbleAuthApi) -> URLRequest.CachePolicy {
+        switch from {
+        case .activeUser:
+            return URLRequest.CachePolicy.reloadIgnoringCacheData
+        default:
+            return URLRequest.CachePolicy.useProtocolCachePolicy
+        }
+    }
+    
+    
+    
+    
+    
     private func formUrlString(_ from: DribbleAuthApi) -> String? {
         switch from {
         case .likeShot(let shotID):
@@ -80,8 +109,6 @@ extension NetworkManager {
             
         case .activeUser:
             return "\(Api.base)\(Api.activeUser)"
-        case .activeUserLikes:
-            return "\(Api.base)\(Api.activeUser)\(Api.listLikes)"
         case .activeUserLikesByPage(let page):
             return "\(Api.base)\(Api.activeUser)\(Api.listLikes)\(Api.page)\(page)"
         case .activeUserShotsByPage(let page):
@@ -102,6 +129,15 @@ extension NetworkManager {
             return formString(userFollowing: userID, page: page)
             
             
+            
+        case .listShotsByPage(let page):
+            return formString(listShotsByPage: page, perPage: DefaultCons.perPageInt, sort: DefaultCons.sortString)
+        case .listShotsByPagePerpage(let page, let perPage):
+            return formString(listShotsByPage: page, perPage: perPage, sort: DefaultCons.sortString)
+        case .listShotsByPageCustomSearch(let page, let sort):
+            return formString(listShotsByPage: page, perPage: DefaultCons.perPageInt, sort: sort)
+        case .listShotsByPagePerpageCustomSearch(let page, let perPage, let sort):
+            return formString(listShotsByPage: page, perPage: perPage, sort: sort)
             
         case .listShotComments(let shotID):
             return formString(listComments: shotID)
@@ -137,8 +173,6 @@ extension NetworkManager {
             
         case .activeUser:
             return "GET"
-        case .activeUserLikes:
-            return "GET"
         case .activeUserLikesByPage,
              .activeUserShotsByPage,
              .activeUserFollowersByPage,
@@ -146,6 +180,13 @@ extension NetworkManager {
             return "GET"
             
             
+        case .listShotsByPage,
+             .listShotsByPagePerpage,
+             .listShotsByPageCustomSearch,
+             .listShotsByPagePerpageCustomSearch:
+            return "GET"
+            
+        
         case .listUserShotsByPage,
              .listUserLikesByPage,
              .listUserFollowersByPage,
@@ -200,6 +241,13 @@ extension NetworkManager {
     }
     
     
+    
+    private func formString(listShotsByPage page: Int, perPage: Int, sort: String) -> String {
+        let urlString = "\(Api.base)\(Api.listShots)\(Api.page)\(page)\(Api.perPage)\(perPage)\(sort)"
+        return urlString
+    }
+    
+
     private func formString(listComments shotID: Int) -> String {
         let urlString = "\(Api.base)\(Api.shots)\(shotID)/\(Api.comments)"
         return urlString

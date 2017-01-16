@@ -11,15 +11,20 @@ import Alamofire
 
 // MARK: - auto using adapter to add access token
 class AccessTokenAdapter: RequestAdapter {
-    private let accessToken: String
+    private var accessToken: String?
     
-    init(accessToken: String) {
+    init(accessToken: String?) {
+        guard let accessToken = accessToken else {
+            return
+        }
         self.accessToken = accessToken
     }
     
     func adapt(_ urlRequest: URLRequest) throws -> URLRequest {
+        guard let accessToken = accessToken else {
+            return urlRequest
+        }
         var urlRequest = urlRequest
-        
         // 64base encryption
         //let credentialData = accessToken.data(using: String.Encoding.utf8)!
         //let base64Credentials = credentialData.base64EncodedString(options: [])

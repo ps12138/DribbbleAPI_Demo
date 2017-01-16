@@ -18,5 +18,15 @@ open class BaseNetwork {
     
     // create alamofire network reachability instance
     internal var netReachManager: NetworkReachabilityManager?
+    
+//    init() {
+//        let config = URLSessionConfiguration.default
+//        // disable urlCache
+//        config.urlCache = nil
+//        // default requestCachePolicy = 0
+//        //print("BaseN: \(config.requestCachePolicy.rawValue)")
+//        config.requestCachePolicy = .reloadIgnoringLocalCacheData
+//        alamofireManager = Alamofire.SessionManager(configuration: config)
+//    }
 }
 
