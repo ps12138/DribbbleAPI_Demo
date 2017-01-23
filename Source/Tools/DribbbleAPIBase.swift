@@ -26,7 +26,6 @@ public enum DribbleAPIBase {
     case activeUserFollowersByPage(Int)
     case activeUserFollowingByPage(Int)
     
-    
     // Int: userID, page
     case listUserLikesByPage(Int, Int)
     case listUserShotsByPage(Int, Int)

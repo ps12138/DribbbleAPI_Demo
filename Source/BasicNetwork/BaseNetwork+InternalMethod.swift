@@ -20,8 +20,8 @@ extension BaseNetwork {
     // MARK: - reachability internal method
     internal func implementStartReachListener(
         host: String?,
-        callBack: @escaping (NetworkReachability
-    ) -> Void) {
+        callBack: @escaping (NetworkReachability) -> Void) {
+        
         guard let urlString = host else {
             return
         }
@@ -56,8 +56,8 @@ extension BaseNetwork {
     internal func implementPerform(
         downloadFrom url: String,
         progress progressCallBack: ((Double) -> Void)? = nil,
-        data dataCallBack: ((Data?) -> Void)?
-    ){
+        data dataCallBack: ((Data?) -> Void)?){
+        
         alamofireManager.download(url)
             .downloadProgress {
                 progressStatus in
@@ -72,8 +72,8 @@ extension BaseNetwork {
     internal func implementPerform(
         downloadFrom url: String,
         progressInQos progressCallBack: ((Double) -> Void)?,
-        data dataCallBack: ((Data?) -> Void)?
-        ){
+        data dataCallBack: ((Data?) -> Void)?){
+        
         // using qos queue to take progress
         let utilityQueue = DispatchQueue.global(qos: .utility)
         alamofireManager.download(url)
@@ -97,8 +97,8 @@ extension BaseNetwork {
         parameters: Dictionary<String,String>,
         headers: Dictionary<String,String>,
         success:((String?) -> Void)?,
-        failure:((Error?, String?) -> Void)?
-    ) {
+        failure:((Error?, String?) -> Void)?) {
+        
         // perform request and handle result
         alamofireManager.request(
             url,
@@ -120,8 +120,8 @@ extension BaseNetwork {
         parameters: Dictionary<String,String>,
         headers: Dictionary<String,String>,
         success:((String?) -> Void)?,
-        failure:((Error?, String?) -> Void)?
-    ) {
+        failure:((Error?, String?) -> Void)?) {
+        
         // perform request and handle result
         alamofireManager.request(
             url,
@@ -142,8 +142,8 @@ extension BaseNetwork {
     internal func implementPerform(
         request: URLRequest,
         success: ((Data?) -> Void)?,
-        failure: ((Error?) -> Void)? = nil
-    ) {
+        failure: ((Error?) -> Void)? = nil) {
+        
         // perform request and handle result
         alamofireManager.request(request)
             .validate(statusCode: 200..<300)
@@ -161,8 +161,8 @@ extension BaseNetwork {
     internal func implementPerform(
         testRequest: URLRequest,
         success: ((Data?) -> Void)?,
-        failure: ((Error?) -> Void)? = nil
-        ) {
+        failure: ((Error?) -> Void)? = nil) {
+        
         // perform request and handle result
         alamofireManager.request(testRequest)
             .validate(statusCode: 200..<300)

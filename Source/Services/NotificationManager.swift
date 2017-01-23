@@ -29,8 +29,8 @@ public class NotificationManager {
     public func addObserver(
         safariVCClose receiver: Any,
         aSelector: Selector,
-        object: Any?
-    ) {
+        object: Any?) {
+        
         center.addObserver(
             receiver,
             selector: aSelector,
@@ -42,8 +42,8 @@ public class NotificationManager {
     public func addObserver(
         accessTokenEvent receiver: Any,
         aSelector: Selector,
-        object: Any?
-        ) {
+        object: Any?) {
+        
         center.addObserver(
             receiver,
             selector: aSelector,
@@ -56,6 +56,7 @@ public class NotificationManager {
     public func removeObserver(
         safariVCClose receiver: Any,
         object: Any?) {
+        
         center.removeObserver(
             receiver,
             name: NotiKeys.kSafariViewControllerCloseNotification,
@@ -65,6 +66,7 @@ public class NotificationManager {
     public func removeObserver(
         accessTokenEvent receiver: Any,
         object: Any?) {
+        
         center.removeObserver(
             receiver,
             name: NotiKeys.kAccessTokenEvent,

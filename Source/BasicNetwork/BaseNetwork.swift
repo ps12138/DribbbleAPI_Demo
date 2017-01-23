@@ -18,7 +18,8 @@ open class BaseNetwork {
     
     // create alamofire network reachability instance
     internal var netReachManager: NetworkReachabilityManager?
-    
+
+    // disable all cache
 //    init() {
 //        let config = URLSessionConfiguration.default
 //        // disable urlCache

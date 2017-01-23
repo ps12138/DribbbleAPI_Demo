@@ -33,8 +33,8 @@ extension BaseNetwork {
     public func perform(
         downloadFrom url: String,
         progress progressCallBack: ((Double) -> Void)? = nil,
-        data dataCallBack: ((Data?) -> Void)?
-    ) {
+        data dataCallBack: ((Data?) -> Void)?) {
+        
         implementPerform(
             downloadFrom: url,
             progress: progressCallBack,
@@ -46,8 +46,8 @@ extension BaseNetwork {
     public func perform(
         downloadFrom url: String,
         progressInQos progressCallBack: ((Double) -> Void)? = nil,
-        data dataCallBack: ((Data?) -> Void)?
-    ) {
+        data dataCallBack: ((Data?) -> Void)?) {
+        
         implementPerform(
             downloadFrom: url,
             progressInQos: progressCallBack,
@@ -64,8 +64,8 @@ extension BaseNetwork {
         parameters: Dictionary<String,String>,
         headers: Dictionary<String,String>,
         success:((String?) -> Void)?,
-        failure:((Error?, String?) -> Void)?
-    ) {
+        failure:((Error?, String?) -> Void)?) {
+        
         implementPerform(
             getFrom: url,
             parameters: parameters,
@@ -81,6 +81,7 @@ extension BaseNetwork {
         headers: Dictionary<String,String>,
         success:((String?) -> Void)?,
         failure:((Error?, String?) -> Void)?) {
+        
         // perform request and handle result
         implementPerform(
             postTo: url,
@@ -92,11 +93,11 @@ extension BaseNetwork {
     }
     
     // MARK: - perform URLRequest
-    // only handle success
+    /// only handle success
     public func performRequest(
         request: URLRequest,
-        success: ((Data?) -> Void)?
-    ) {
+        success: ((Data?) -> Void)?) {
+        
         implementPerform(
             request: request,
             success: success,
@@ -104,12 +105,12 @@ extension BaseNetwork {
         )
     }
     
-    // with handle failure error/errorData and success
+    /// with handle failure error/errorData and success
     public func perform(
         request: URLRequest,
         success: ((Data?) -> Void)?,
-        failure: ((Error?) -> Void)? = nil
-    ) {
+        failure: ((Error?) -> Void)? = nil) {
+        
         implementPerform(
             request: request,
             success: success,
@@ -117,12 +118,12 @@ extension BaseNetwork {
         )
     }
     
-    // for test request
+    /// for test request
     public func perform(
         testRequest: URLRequest,
         success: ((Data?) -> Void)?,
-        failure: ((Error?) -> Void)? = nil
-        ) {
+        failure: ((Error?) -> Void)? = nil) {
+        
         implementPerform(
             request: testRequest,
             success: success,
