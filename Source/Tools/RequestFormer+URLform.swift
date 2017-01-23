@@ -1,112 +1,28 @@
 //
-//  NetworkManager+FormRequest.swift
-//  DribbbleModuleFrameworkShadow
+//  RequestFormer+URLform.swift
+//  DribbbleAPI_Demo
 //
-//  Created by PSL on 12/8/16.
-//  Copyright © 2016 PSL. All rights reserved.
+//  Created by PSL on 1/22/17.
+//  Copyright © 2017 PSL. All rights reserved.
 //
 
 import Foundation
 
-
-extension NetworkManager {
+// MARK: - form url string
+extension RequestFormer {
     
-    // MARK: - public method
-    public func formRequest(_ from: DribbleAuthApi) -> URLRequest?{
-        
-        var urlString: String? {
-            return formUrlString(from)
-        }
-        var httpMethod: String? {
-            return formHttpMethod(from)
-        }
-        var httpBody: Data? {
-            switch from {
-            case .createComment( _, let content):
-                return formBody(bodyString: content)
-            default:
-                return nil
-            }
-        }
-        var cachePolicy: URLRequest.CachePolicy {
-            return formCachePolicy(from)
-        }
-        
-        guard
-            httpMethod != nil,
-            let absoluteString = urlString,
-            let url = URL(string: absoluteString)
-            else {
-                print("NetM.formReq: fail to form request")
-                return nil
-        }
-        
-        // form request
-        var request = URLRequest(url: url)
-        request.httpMethod = httpMethod
-        request.cachePolicy = cachePolicy
-        // add body
-        request.httpBody = httpBody
-        
-        print("NetM.formReq: form req \(request.url!)")
-        return request
-    }
-    
-    // MARK: - Api constant
-    fileprivate struct DefaultCons {
-        static let perPageInt = 12
-        static let sortString = ""
-    }
-    
-    
-    
-    fileprivate struct Api {
-        
-        static let base = "\(Constants.apiBase)/v1/"
-        static let shots = "shots/"
-        static let like = "like"
-        
-        static let listLikes = "likes"
-        static let listShots = "shots"
-        static let listFollowers = "followers"
-        static let listFollowing = "following"
-        
-        static let activeUser = "user/"
-        static let users = "users/"
-        
-        static let comments = "comments"
-        static let page = "?page="
-        static let perPage = "&per_page="
-        
-        static let paraBegin = "?"
-        static let paraBetween = "&"
-    }
-
-    // MARK: - Private method
-    
-    // custom CachePolicy
-    private func formCachePolicy(_ from: DribbleAuthApi) -> URLRequest.CachePolicy {
+    internal func formUrlString(_ from: DribbleAPIBase) -> String? {
         switch from {
-        case .activeUser:
-            return URLRequest.CachePolicy.reloadIgnoringCacheData
-        default:
-            return URLRequest.CachePolicy.useProtocolCachePolicy
-        }
-    }
-    
-    
-    
-    
-    
-    private func formUrlString(_ from: DribbleAuthApi) -> String? {
-        switch from {
+        
+        // about like operation
         case .likeShot(let shotID):
             return formString(like: shotID)
         case .checkLikeShot(let shotID):
             return formString(like: shotID)
         case .unlikeShot(let shotID):
             return formString(like: shotID)
-            
+        
+        // about auth user
         case .activeUser:
             return "\(Api.base)\(Api.activeUser)"
         case .activeUserLikesByPage(let page):
@@ -118,7 +34,7 @@ extension NetworkManager {
         case .activeUserFollowingByPage(let page):
             return "\(Api.base)\(Api.activeUser)\(Api.listFollowing)\(Api.page)\(page)"
             
-            
+        // about other user
         case .listUserShotsByPage(let userID, let page):
             return formString(userShots: userID, page: page)
         case .listUserLikesByPage(let userID, let page):
@@ -128,8 +44,7 @@ extension NetworkManager {
         case .listUserFollowingByPage(let userID, let page):
             return formString(userFollowing: userID, page: page)
             
-            
-            
+        // about shots
         case .listShotsByPage(let page):
             return formString(listShotsByPage: page, perPage: DefaultCons.perPageInt, sort: DefaultCons.sortString)
         case .listShotsByPagePerpage(let page, let perPage):
@@ -146,7 +61,8 @@ extension NetworkManager {
         case .listShotCommentsByPage(let shotID, let page):
             return formString(listComments: shotID, page: page)
             
-            
+        
+        // about comment
         case .createComment(let shotID, _):
             return "\(Api.base)\(Api.shots)\(shotID)/\(Api.comments)"
         case .deleteComment(let shotID):
@@ -162,56 +78,6 @@ extension NetworkManager {
         }
     }
     
-    private func formHttpMethod(_ from: DribbleAuthApi) -> String? {
-        switch from {
-        case .likeShot:
-            return "POST"
-        case .checkLikeShot:
-            return "GET"
-        case .unlikeShot:
-            return "DELETE"
-            
-        case .activeUser:
-            return "GET"
-        case .activeUserLikesByPage,
-             .activeUserShotsByPage,
-             .activeUserFollowersByPage,
-             .activeUserFollowingByPage:
-            return "GET"
-            
-            
-        case .listShotsByPage,
-             .listShotsByPagePerpage,
-             .listShotsByPageCustomSearch,
-             .listShotsByPagePerpageCustomSearch:
-            return "GET"
-            
-        
-        case .listUserShotsByPage,
-             .listUserLikesByPage,
-             .listUserFollowersByPage,
-             .listUserFollowingByPage:
-            return "GET"
-            
-        case .listShotComments,
-             .listLikesForComment,
-             .listShotCommentsByPage:
-            return "GET"
-            
-        case .createComment:
-            return "POST"
-        case .deleteComment:
-            return "DELETE"
-            
-        case .likeComment:
-            return "POST"
-        case .unlikeComment:
-            return "DELETE"
-            
-        default:
-            return nil
-        }
-    }
     
     
     // form String for url
@@ -241,13 +107,12 @@ extension NetworkManager {
     }
     
     
-    
     private func formString(listShotsByPage page: Int, perPage: Int, sort: String) -> String {
         let urlString = "\(Api.base)\(Api.listShots)\(Api.page)\(page)\(Api.perPage)\(perPage)\(sort)"
         return urlString
     }
     
-
+    
     private func formString(listComments shotID: Int) -> String {
         let urlString = "\(Api.base)\(Api.shots)\(shotID)/\(Api.comments)"
         return urlString
@@ -267,11 +132,4 @@ extension NetworkManager {
         let urlString = "\(Api.base)\(Api.shots)\(shotID)/\(Api.comments)/\(commentID)/\(Api.listLikes)"
         return urlString
     }
-    
-    private func formBody(bodyString: String) -> Data? {
-        let dict = ["body": bodyString]
-        let data = try? JSONSerialization.data(withJSONObject: dict, options: [])
-        return data
-    }
-    
 }

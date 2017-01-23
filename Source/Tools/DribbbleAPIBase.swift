@@ -1,14 +1,14 @@
 //
-//  DribbbleApiEnum.swift
-//  opShot_Demo
+//  DribbbleAPIBase.swift
+//  DribbbleAPI_Demo
 //
-//  Created by PSL on 12/12/16.
-//  Copyright © 2016 PSL. All rights reserved.
+//  Created by PSL on 1/22/17.
+//  Copyright © 2017 PSL. All rights reserved.
 //
 
 import Foundation
 
-public enum DribbleAuthApi {
+public enum DribbleAPIBase {
     
     case Error
     // Int: ID
@@ -26,7 +26,7 @@ public enum DribbleAuthApi {
     case activeUserFollowersByPage(Int)
     case activeUserFollowingByPage(Int)
     
-
+    
     // Int: userID, page
     case listUserLikesByPage(Int, Int)
     case listUserShotsByPage(Int, Int)

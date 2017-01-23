@@ -13,12 +13,9 @@ public struct ShotKey {
     static let id = "id"
     static let title = "title"
     static let description = "description"
-    
     static let width = "width"
     static let height = "height"
-    
     static let images = "images"
-    
     static let views_count = "views_count"
     static let likes_count = "likes_count"
     static let comments_count = "comments_count"
@@ -36,7 +33,6 @@ public struct ShotKey {
     static let rebounds_url = "rebounds_url"
     static let animated = "animated"
     static let tags = "tags"
-    
     static let user = "user"
 }
 
@@ -52,10 +48,8 @@ public struct UserKey {
     static let avatar_url = "avatar_url"
     static let bio = "bio"
     static let location = "location"
-    
     // Dict
     static let links = "links"
-    
     // Int count
     static let buckets_count = "buckets_count"
     static let comments_received_count = "comments_received_count"
@@ -98,11 +92,9 @@ public struct CommentKey {
     static let id = "id"
     static let body = "body"
     static let likes_count = "likes_count"
-    
     static let likes_url = "likes_url"
     static let created_at = "created_at"
     static let updated_at = "updated_at"
-    
     static let user = "user"
 }
 
