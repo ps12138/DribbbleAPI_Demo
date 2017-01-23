@@ -1,0 +1,24 @@
+PODS:
+  - Alamofire (4.3.0)
+  - Fuzi (1.0.1)
+  - Kingfisher (3.2.4)
+  - Locksmith (3.0.0)
+  - SwiftyJSON (3.1.4)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.0)
+  - Fuzi (~> 1.0.0)
+  - Kingfisher
+  - Locksmith
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
+  Fuzi: 851403654bac55675aaeed815d0c8a1d3e3d3e8b
+  Kingfisher: 8d80f39da403cd9c9ee11984e1655f4d6a566cdb
+  Locksmith: 310b4cc5031af5728bf4db5d4de547a5100c6a3b
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+
+PODFILE CHECKSUM: 992b9686960f6e46083fce4b259242c4c847ae55
+
+COCOAPODS: 1.1.1

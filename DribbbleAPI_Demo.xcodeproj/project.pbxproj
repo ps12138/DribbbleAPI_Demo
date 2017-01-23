@@ -14,6 +14,35 @@
 		107288451E3582CF00FF1FCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 107288431E3582CF00FF1FCD /* LaunchScreen.storyboard */; };
 		107288501E3582CF00FF1FCD /* DribbbleAPI_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1072884F1E3582CF00FF1FCD /* DribbbleAPI_DemoTests.swift */; };
 		1072885B1E3582CF00FF1FCD /* DribbbleAPI_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1072885A1E3582CF00FF1FCD /* DribbbleAPI_DemoUITests.swift */; };
+		1072888E1E35832800FF1FCD /* AccessTokenAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1072886C1E35832800FF1FCD /* AccessTokenAdapter.swift */; };
+		1072888F1E35832800FF1FCD /* BaseNetwork+InternalMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1072886D1E35832800FF1FCD /* BaseNetwork+InternalMethod.swift */; };
+		107288901E35832800FF1FCD /* BaseNetwork+PublicAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1072886E1E35832800FF1FCD /* BaseNetwork+PublicAPI.swift */; };
+		107288911E35832800FF1FCD /* BaseNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1072886F1E35832800FF1FCD /* BaseNetwork.swift */; };
+		107288921E35832800FF1FCD /* readme.md in Sources */ = {isa = PBXBuildFile; fileRef = 107288701E35832800FF1FCD /* readme.md */; };
+		107288941E35832800FF1FCD /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107288731E35832800FF1FCD /* Comment.swift */; };
+		107288951E35832800FF1FCD /* CommentBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107288741E35832800FF1FCD /* CommentBody.swift */; };
+		107288961E35832800FF1FCD /* DescriptionBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107288751E35832800FF1FCD /* DescriptionBody.swift */; };
+		107288971E35832800FF1FCD /* ImageBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107288761E35832800FF1FCD /* ImageBlock.swift */; };
+		107288981E35832800FF1FCD /* JsonKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107288771E35832800FF1FCD /* JsonKeys.swift */; };
+		107288991E35832800FF1FCD /* readme.md in Sources */ = {isa = PBXBuildFile; fileRef = 107288781E35832800FF1FCD /* readme.md */; };
+		1072889A1E35832800FF1FCD /* ShotBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107288791E35832800FF1FCD /* ShotBlock.swift */; };
+		1072889B1E35832800FF1FCD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1072887A1E35832800FF1FCD /* User.swift */; };
+		1072889C1E35832800FF1FCD /* DribbbleApiEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1072887C1E35832800FF1FCD /* DribbbleApiEnum.swift */; };
+		1072889D1E35832800FF1FCD /* NetworkManager+OAuth2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1072887D1E35832800FF1FCD /* NetworkManager+OAuth2.swift */; };
+		1072889E1E35832800FF1FCD /* NetworkManager+publicDataExchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1072887E1E35832800FF1FCD /* NetworkManager+publicDataExchange.swift */; };
+		1072889F1E35832800FF1FCD /* NetworkManager+publicFormRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1072887F1E35832800FF1FCD /* NetworkManager+publicFormRequest.swift */; };
+		107288A01E35832800FF1FCD /* NetworkManager+publicPerformRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107288801E35832800FF1FCD /* NetworkManager+publicPerformRequest.swift */; };
+		107288A11E35832800FF1FCD /* NetworkManager+publicPerformTestRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107288811E35832800FF1FCD /* NetworkManager+publicPerformTestRequest.swift */; };
+		107288A21E35832800FF1FCD /* NetworkManager+publicReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107288821E35832800FF1FCD /* NetworkManager+publicReachability.swift */; };
+		107288A31E35832800FF1FCD /* NetworkManager+publicStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107288831E35832800FF1FCD /* NetworkManager+publicStatus.swift */; };
+		107288A41E35832800FF1FCD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107288841E35832800FF1FCD /* NetworkManager.swift */; };
+		107288A61E35832800FF1FCD /* KeyChainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107288871E35832800FF1FCD /* KeyChainManager.swift */; };
+		107288A71E35832800FF1FCD /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107288881E35832800FF1FCD /* NetworkReachability.swift */; };
+		107288A81E35832800FF1FCD /* ParseJson+internalMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107288891E35832800FF1FCD /* ParseJson+internalMethod.swift */; };
+		107288A91E35832800FF1FCD /* ParseJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1072888A1E35832800FF1FCD /* ParseJson.swift */; };
+		107288AA1E35832800FF1FCD /* ParseXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1072888B1E35832800FF1FCD /* ParseXML.swift */; };
+		107288AB1E35832800FF1FCD /* readme.md in Sources */ = {isa = PBXBuildFile; fileRef = 1072888C1E35832800FF1FCD /* readme.md */; };
+		1C1B1D69C68829834CE2451E /* Pods_DribbbleAPI_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF4F03B16EF769A044BCDD9 /* Pods_DribbbleAPI_Demo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +63,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F71DEA0BAF188B6BDCC1D43 /* Pods-DribbbleAPI_Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DribbbleAPI_Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DribbbleAPI_Demo/Pods-DribbbleAPI_Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		107288371E3582CF00FF1FCD /* DribbbleAPI_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DribbbleAPI_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1072883A1E3582CF00FF1FCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1072883C1E3582CF00FF1FCD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +77,36 @@
 		107288561E3582CF00FF1FCD /* DribbbleAPI_DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DribbbleAPI_DemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1072885A1E3582CF00FF1FCD /* DribbbleAPI_DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DribbbleAPI_DemoUITests.swift; sourceTree = "<group>"; };
 		1072885C1E3582CF00FF1FCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1072886C1E35832800FF1FCD /* AccessTokenAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessTokenAdapter.swift; sourceTree = "<group>"; };
+		1072886D1E35832800FF1FCD /* BaseNetwork+InternalMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BaseNetwork+InternalMethod.swift"; sourceTree = "<group>"; };
+		1072886E1E35832800FF1FCD /* BaseNetwork+PublicAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BaseNetwork+PublicAPI.swift"; sourceTree = "<group>"; };
+		1072886F1E35832800FF1FCD /* BaseNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNetwork.swift; sourceTree = "<group>"; };
+		107288701E35832800FF1FCD /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
+		107288731E35832800FF1FCD /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		107288741E35832800FF1FCD /* CommentBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentBody.swift; sourceTree = "<group>"; };
+		107288751E35832800FF1FCD /* DescriptionBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionBody.swift; sourceTree = "<group>"; };
+		107288761E35832800FF1FCD /* ImageBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageBlock.swift; sourceTree = "<group>"; };
+		107288771E35832800FF1FCD /* JsonKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonKeys.swift; sourceTree = "<group>"; };
+		107288781E35832800FF1FCD /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
+		107288791E35832800FF1FCD /* ShotBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotBlock.swift; sourceTree = "<group>"; };
+		1072887A1E35832800FF1FCD /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1072887C1E35832800FF1FCD /* DribbbleApiEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DribbbleApiEnum.swift; sourceTree = "<group>"; };
+		1072887D1E35832800FF1FCD /* NetworkManager+OAuth2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NetworkManager+OAuth2.swift"; sourceTree = "<group>"; };
+		1072887E1E35832800FF1FCD /* NetworkManager+publicDataExchange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NetworkManager+publicDataExchange.swift"; sourceTree = "<group>"; };
+		1072887F1E35832800FF1FCD /* NetworkManager+publicFormRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NetworkManager+publicFormRequest.swift"; sourceTree = "<group>"; };
+		107288801E35832800FF1FCD /* NetworkManager+publicPerformRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NetworkManager+publicPerformRequest.swift"; sourceTree = "<group>"; };
+		107288811E35832800FF1FCD /* NetworkManager+publicPerformTestRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NetworkManager+publicPerformTestRequest.swift"; sourceTree = "<group>"; };
+		107288821E35832800FF1FCD /* NetworkManager+publicReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NetworkManager+publicReachability.swift"; sourceTree = "<group>"; };
+		107288831E35832800FF1FCD /* NetworkManager+publicStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NetworkManager+publicStatus.swift"; sourceTree = "<group>"; };
+		107288841E35832800FF1FCD /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		107288871E35832800FF1FCD /* KeyChainManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyChainManager.swift; sourceTree = "<group>"; };
+		107288881E35832800FF1FCD /* NetworkReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
+		107288891E35832800FF1FCD /* ParseJson+internalMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ParseJson+internalMethod.swift"; sourceTree = "<group>"; };
+		1072888A1E35832800FF1FCD /* ParseJson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseJson.swift; sourceTree = "<group>"; };
+		1072888B1E35832800FF1FCD /* ParseXML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseXML.swift; sourceTree = "<group>"; };
+		1072888C1E35832800FF1FCD /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
+		893C61B9997BB62F59F9378E /* Pods-DribbbleAPI_Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DribbbleAPI_Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DribbbleAPI_Demo/Pods-DribbbleAPI_Demo.release.xcconfig"; sourceTree = "<group>"; };
+		EAF4F03B16EF769A044BCDD9 /* Pods_DribbbleAPI_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DribbbleAPI_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C1B1D69C68829834CE2451E /* Pods_DribbbleAPI_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +142,8 @@
 				1072884E1E3582CF00FF1FCD /* DribbbleAPI_DemoTests */,
 				107288591E3582CF00FF1FCD /* DribbbleAPI_DemoUITests */,
 				107288381E3582CF00FF1FCD /* Products */,
+				8C96A18BBF084E14D6EB1472 /* Pods */,
+				8E3F4C6673BD544BC782C3B9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +160,10 @@
 		107288391E3582CF00FF1FCD /* DribbbleAPI_Demo */ = {
 			isa = PBXGroup;
 			children = (
-				1072883A1E3582CF00FF1FCD /* AppDelegate.swift */,
+				107288691E35832800FF1FCD /* dribbbleAPI */,
+				107288681E35830800FF1FCD /* Supporting Files */,
 				1072883C1E3582CF00FF1FCD /* ViewController.swift */,
 				1072883E1E3582CF00FF1FCD /* Main.storyboard */,
-				107288411E3582CF00FF1FCD /* Assets.xcassets */,
-				107288431E3582CF00FF1FCD /* LaunchScreen.storyboard */,
-				107288461E3582CF00FF1FCD /* Info.plist */,
 			);
 			path = DribbbleAPI_Demo;
 			sourceTree = "<group>";
@@ -125,6 +186,101 @@
 			path = DribbbleAPI_DemoUITests;
 			sourceTree = "<group>";
 		};
+		107288681E35830800FF1FCD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1072883A1E3582CF00FF1FCD /* AppDelegate.swift */,
+				107288411E3582CF00FF1FCD /* Assets.xcassets */,
+				107288431E3582CF00FF1FCD /* LaunchScreen.storyboard */,
+				107288461E3582CF00FF1FCD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		107288691E35832800FF1FCD /* dribbbleAPI */ = {
+			isa = PBXGroup;
+			children = (
+				1072886B1E35832800FF1FCD /* BaseNetwork */,
+				107288721E35832800FF1FCD /* Model */,
+				1072887B1E35832800FF1FCD /* NetworkManager */,
+				107288861E35832800FF1FCD /* Utility */,
+			);
+			path = dribbbleAPI;
+			sourceTree = "<group>";
+		};
+		1072886B1E35832800FF1FCD /* BaseNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				1072886C1E35832800FF1FCD /* AccessTokenAdapter.swift */,
+				1072886D1E35832800FF1FCD /* BaseNetwork+InternalMethod.swift */,
+				1072886E1E35832800FF1FCD /* BaseNetwork+PublicAPI.swift */,
+				1072886F1E35832800FF1FCD /* BaseNetwork.swift */,
+				107288701E35832800FF1FCD /* readme.md */,
+			);
+			path = BaseNetwork;
+			sourceTree = "<group>";
+		};
+		107288721E35832800FF1FCD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				107288731E35832800FF1FCD /* Comment.swift */,
+				107288741E35832800FF1FCD /* CommentBody.swift */,
+				107288751E35832800FF1FCD /* DescriptionBody.swift */,
+				107288761E35832800FF1FCD /* ImageBlock.swift */,
+				107288771E35832800FF1FCD /* JsonKeys.swift */,
+				107288781E35832800FF1FCD /* readme.md */,
+				107288791E35832800FF1FCD /* ShotBlock.swift */,
+				1072887A1E35832800FF1FCD /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1072887B1E35832800FF1FCD /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				1072887C1E35832800FF1FCD /* DribbbleApiEnum.swift */,
+				1072887D1E35832800FF1FCD /* NetworkManager+OAuth2.swift */,
+				1072887E1E35832800FF1FCD /* NetworkManager+publicDataExchange.swift */,
+				1072887F1E35832800FF1FCD /* NetworkManager+publicFormRequest.swift */,
+				107288801E35832800FF1FCD /* NetworkManager+publicPerformRequest.swift */,
+				107288811E35832800FF1FCD /* NetworkManager+publicPerformTestRequest.swift */,
+				107288821E35832800FF1FCD /* NetworkManager+publicReachability.swift */,
+				107288831E35832800FF1FCD /* NetworkManager+publicStatus.swift */,
+				107288841E35832800FF1FCD /* NetworkManager.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		107288861E35832800FF1FCD /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				107288871E35832800FF1FCD /* KeyChainManager.swift */,
+				107288881E35832800FF1FCD /* NetworkReachability.swift */,
+				107288891E35832800FF1FCD /* ParseJson+internalMethod.swift */,
+				1072888A1E35832800FF1FCD /* ParseJson.swift */,
+				1072888B1E35832800FF1FCD /* ParseXML.swift */,
+				1072888C1E35832800FF1FCD /* readme.md */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		8C96A18BBF084E14D6EB1472 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0F71DEA0BAF188B6BDCC1D43 /* Pods-DribbbleAPI_Demo.debug.xcconfig */,
+				893C61B9997BB62F59F9378E /* Pods-DribbbleAPI_Demo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8E3F4C6673BD544BC782C3B9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EAF4F03B16EF769A044BCDD9 /* Pods_DribbbleAPI_Demo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +288,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1072885F1E3582CF00FF1FCD /* Build configuration list for PBXNativeTarget "DribbbleAPI_Demo" */;
 			buildPhases = (
+				C30631911CC6078A0230BCB4 /* [CP] Check Pods Manifest.lock */,
 				107288331E3582CF00FF1FCD /* Sources */,
 				107288341E3582CF00FF1FCD /* Frameworks */,
 				107288351E3582CF00FF1FCD /* Resources */,
+				8F9983E4B9D4704759E881DA /* [CP] Embed Pods Frameworks */,
+				F95DE5ECF44136C6869E14A0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,13 +413,89 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8F9983E4B9D4704759E881DA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DribbbleAPI_Demo/Pods-DribbbleAPI_Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C30631911CC6078A0230BCB4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F95DE5ECF44136C6869E14A0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DribbbleAPI_Demo/Pods-DribbbleAPI_Demo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		107288331E3582CF00FF1FCD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				107288951E35832800FF1FCD /* CommentBody.swift in Sources */,
+				1072888E1E35832800FF1FCD /* AccessTokenAdapter.swift in Sources */,
 				1072883D1E3582CF00FF1FCD /* ViewController.swift in Sources */,
+				107288A81E35832800FF1FCD /* ParseJson+internalMethod.swift in Sources */,
+				107288A01E35832800FF1FCD /* NetworkManager+publicPerformRequest.swift in Sources */,
+				107288991E35832800FF1FCD /* readme.md in Sources */,
+				1072889F1E35832800FF1FCD /* NetworkManager+publicFormRequest.swift in Sources */,
+				107288901E35832800FF1FCD /* BaseNetwork+PublicAPI.swift in Sources */,
+				1072889C1E35832800FF1FCD /* DribbbleApiEnum.swift in Sources */,
+				107288961E35832800FF1FCD /* DescriptionBody.swift in Sources */,
+				107288941E35832800FF1FCD /* Comment.swift in Sources */,
+				107288911E35832800FF1FCD /* BaseNetwork.swift in Sources */,
+				1072889B1E35832800FF1FCD /* User.swift in Sources */,
+				107288A41E35832800FF1FCD /* NetworkManager.swift in Sources */,
+				107288A71E35832800FF1FCD /* NetworkReachability.swift in Sources */,
+				1072889E1E35832800FF1FCD /* NetworkManager+publicDataExchange.swift in Sources */,
+				107288921E35832800FF1FCD /* readme.md in Sources */,
+				107288A91E35832800FF1FCD /* ParseJson.swift in Sources */,
+				1072889A1E35832800FF1FCD /* ShotBlock.swift in Sources */,
+				107288A61E35832800FF1FCD /* KeyChainManager.swift in Sources */,
+				107288AB1E35832800FF1FCD /* readme.md in Sources */,
+				1072889D1E35832800FF1FCD /* NetworkManager+OAuth2.swift in Sources */,
+				107288971E35832800FF1FCD /* ImageBlock.swift in Sources */,
+				1072888F1E35832800FF1FCD /* BaseNetwork+InternalMethod.swift in Sources */,
+				107288A21E35832800FF1FCD /* NetworkManager+publicReachability.swift in Sources */,
 				1072883B1E3582CF00FF1FCD /* AppDelegate.swift in Sources */,
+				107288A31E35832800FF1FCD /* NetworkManager+publicStatus.swift in Sources */,
+				107288AA1E35832800FF1FCD /* ParseXML.swift in Sources */,
+				107288981E35832800FF1FCD /* JsonKeys.swift in Sources */,
+				107288A11E35832800FF1FCD /* NetworkManager+publicPerformTestRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +643,7 @@
 		};
 		107288601E3582CF00FF1FCD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F71DEA0BAF188B6BDCC1D43 /* Pods-DribbbleAPI_Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DribbbleAPI_Demo/Info.plist;
@@ -420,6 +656,7 @@
 		};
 		107288611E3582CF00FF1FCD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 893C61B9997BB62F59F9378E /* Pods-DribbbleAPI_Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DribbbleAPI_Demo/Info.plist;
@@ -503,6 +740,7 @@
 				107288611E3582CF00FF1FCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		107288621E3582CF00FF1FCD /* Build configuration list for PBXNativeTarget "DribbbleAPI_DemoTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +749,7 @@
 				107288641E3582CF00FF1FCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		107288651E3582CF00FF1FCD /* Build configuration list for PBXNativeTarget "DribbbleAPI_DemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +758,7 @@
 				107288671E3582CF00FF1FCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
