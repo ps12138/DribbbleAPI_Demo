@@ -263,8 +263,8 @@
 			children = (
 				10F87C241E35873A0098690B /* KeyChainManager.swift */,
 				10F87C251E35873A0098690B /* NetworkReachability.swift */,
-				10F87C261E35873A0098690B /* ParseJson+internalMethod.swift */,
 				10F87C271E35873A0098690B /* ParseJson.swift */,
+				10F87C261E35873A0098690B /* ParseJson+internalMethod.swift */,
 				10F87C281E35873A0098690B /* ParseXML.swift */,
 				10D6E7951E358A1D00B2D37D /* DribbbleAPIBase.swift */,
 				10D6E7931E3589FE00B2D37D /* RequestFormer.swift */,

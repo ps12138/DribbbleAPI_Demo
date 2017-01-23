@@ -9,8 +9,20 @@
 import Foundation
 import SwiftyJSON
 
+
+protocol ParseJsonInterface {
+    func parse(listShot receivedData: Data?) -> [ShotBlock]
+    func parse(userLikes receivedData: Data?) -> [ShotBlock]
+    func parse(sessionid receivedData: Data?) -> Int?
+    func parse(sessionidMapToshotid receivedData: Data?) -> Dictionary<Int, Int>?
+    func parse(user receivedData: Data?) -> User?
+    func parse(comments receivedData: Data?) -> [Comment]
+    func parse(comment receivedData: Data?) -> Comment?
+}
+
+
 // MARK: - parse Json to Model
-open class ParseJson {
+struct ParseJson: ParseJsonInterface {
     // MARK: - Public API
     public func parse(listShot receivedData: Data?) -> [ShotBlock] {
         return implement(parseToShotBlocks: receivedData)
