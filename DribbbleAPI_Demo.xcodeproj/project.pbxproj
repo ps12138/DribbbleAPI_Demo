@@ -15,8 +15,6 @@
 		107288501E3582CF00FF1FCD /* DribbbleAPI_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1072884F1E3582CF00FF1FCD /* DribbbleAPI_DemoTests.swift */; };
 		1072885B1E3582CF00FF1FCD /* DribbbleAPI_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1072885A1E3582CF00FF1FCD /* DribbbleAPI_DemoUITests.swift */; };
 		10812B5B1E36E1860034ECD8 /* OAuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10812B5A1E36E1860034ECD8 /* OAuthController.swift */; };
-		10812B621E36FAFF0034ECD8 /* OAuthController+OAuthFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10812B601E36FAFF0034ECD8 /* OAuthController+OAuthFlow.swift */; };
-		10812B631E36FAFF0034ECD8 /* OAuthController+PublicMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10812B611E36FAFF0034ECD8 /* OAuthController+PublicMethods.swift */; };
 		10D6E7941E3589FE00B2D37D /* RequestFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D6E7931E3589FE00B2D37D /* RequestFormer.swift */; };
 		10D6E7961E358A1D00B2D37D /* DribbbleAPIBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D6E7951E358A1D00B2D37D /* DribbbleAPIBase.swift */; };
 		10D6E7981E358AB800B2D37D /* RequestFormer+HTTPMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D6E7971E358AB800B2D37D /* RequestFormer+HTTPMethods.swift */; };
@@ -81,8 +79,6 @@
 		1072885A1E3582CF00FF1FCD /* DribbbleAPI_DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DribbbleAPI_DemoUITests.swift; sourceTree = "<group>"; };
 		1072885C1E3582CF00FF1FCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10812B5A1E36E1860034ECD8 /* OAuthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthController.swift; sourceTree = "<group>"; };
-		10812B601E36FAFF0034ECD8 /* OAuthController+OAuthFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OAuthController+OAuthFlow.swift"; sourceTree = "<group>"; };
-		10812B611E36FAFF0034ECD8 /* OAuthController+PublicMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OAuthController+PublicMethods.swift"; sourceTree = "<group>"; };
 		10D6E7931E3589FE00B2D37D /* RequestFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestFormer.swift; sourceTree = "<group>"; };
 		10D6E7951E358A1D00B2D37D /* DribbbleAPIBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DribbbleAPIBase.swift; sourceTree = "<group>"; };
 		10D6E7971E358AB800B2D37D /* RequestFormer+HTTPMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RequestFormer+HTTPMethods.swift"; sourceTree = "<group>"; };
@@ -275,8 +271,6 @@
 				10D6E7991E358B3400B2D37D /* RequestFormer+URLform.swift */,
 				10D6E79B1E358BD400B2D37D /* RequestFormer+policyAndBody.swift */,
 				10812B5A1E36E1860034ECD8 /* OAuthController.swift */,
-				10812B601E36FAFF0034ECD8 /* OAuthController+OAuthFlow.swift */,
-				10812B611E36FAFF0034ECD8 /* OAuthController+PublicMethods.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -487,10 +481,8 @@
 				10F87C331E35873A0098690B /* User.swift in Sources */,
 				10F87C291E35873A0098690B /* AccessTokenAdapter.swift in Sources */,
 				1072883D1E3582CF00FF1FCD /* ViewController.swift in Sources */,
-				10812B621E36FAFF0034ECD8 /* OAuthController+OAuthFlow.swift in Sources */,
 				10D6E7981E358AB800B2D37D /* RequestFormer+HTTPMethods.swift in Sources */,
 				10D6E79C1E358BD400B2D37D /* RequestFormer+policyAndBody.swift in Sources */,
-				10812B631E36FAFF0034ECD8 /* OAuthController+PublicMethods.swift in Sources */,
 				10F87C2B1E35873A0098690B /* BaseNetwork+PublicAPI.swift in Sources */,
 				10F87C3C1E35873A0098690B /* NetworkManager.swift in Sources */,
 				10D6E7961E358A1D00B2D37D /* DribbbleAPIBase.swift in Sources */,
