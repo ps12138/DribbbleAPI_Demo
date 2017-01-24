@@ -21,8 +21,6 @@
 		10D6E79A1E358B3400B2D37D /* RequestFormer+URLform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D6E7991E358B3400B2D37D /* RequestFormer+URLform.swift */; };
 		10D6E79C1E358BD400B2D37D /* RequestFormer+policyAndBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D6E79B1E358BD400B2D37D /* RequestFormer+policyAndBody.swift */; };
 		10D6E79F1E358F8900B2D37D /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D6E79E1E358F8900B2D37D /* NotificationManager.swift */; };
-		10DA05A91E36FCCE00B36889 /* OAuthController+oauthflow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DA05A71E36FCCE00B36889 /* OAuthController+oauthflow.swift */; };
-		10DA05AA1E36FCCE00B36889 /* OAuthController+publicmethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DA05A81E36FCCE00B36889 /* OAuthController+publicmethods.swift */; };
 		10F87C291E35873A0098690B /* AccessTokenAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F87C0D1E35873A0098690B /* AccessTokenAdapter.swift */; };
 		10F87C2A1E35873A0098690B /* BaseNetwork+InternalMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F87C0E1E35873A0098690B /* BaseNetwork+InternalMethod.swift */; };
 		10F87C2B1E35873A0098690B /* BaseNetwork+PublicAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F87C0F1E35873A0098690B /* BaseNetwork+PublicAPI.swift */; };
@@ -87,8 +85,6 @@
 		10D6E7991E358B3400B2D37D /* RequestFormer+URLform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RequestFormer+URLform.swift"; sourceTree = "<group>"; };
 		10D6E79B1E358BD400B2D37D /* RequestFormer+policyAndBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RequestFormer+policyAndBody.swift"; sourceTree = "<group>"; };
 		10D6E79E1E358F8900B2D37D /* NotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
-		10DA05A71E36FCCE00B36889 /* OAuthController+oauthflow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OAuthController+oauthflow.swift"; sourceTree = "<group>"; };
-		10DA05A81E36FCCE00B36889 /* OAuthController+publicmethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OAuthController+publicmethods.swift"; sourceTree = "<group>"; };
 		10F87C0D1E35873A0098690B /* AccessTokenAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessTokenAdapter.swift; sourceTree = "<group>"; };
 		10F87C0E1E35873A0098690B /* BaseNetwork+InternalMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BaseNetwork+InternalMethod.swift"; sourceTree = "<group>"; };
 		10F87C0F1E35873A0098690B /* BaseNetwork+PublicAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BaseNetwork+PublicAPI.swift"; sourceTree = "<group>"; };
@@ -274,8 +270,6 @@
 				10D6E7971E358AB800B2D37D /* RequestFormer+HTTPMethods.swift */,
 				10D6E7991E358B3400B2D37D /* RequestFormer+URLform.swift */,
 				10D6E79B1E358BD400B2D37D /* RequestFormer+policyAndBody.swift */,
-				10DA05A71E36FCCE00B36889 /* OAuthController+oauthflow.swift */,
-				10DA05A81E36FCCE00B36889 /* OAuthController+publicmethods.swift */,
 				10812B5A1E36E1860034ECD8 /* OAuthController.swift */,
 			);
 			path = Tools;
@@ -487,7 +481,6 @@
 				10F87C331E35873A0098690B /* User.swift in Sources */,
 				10F87C291E35873A0098690B /* AccessTokenAdapter.swift in Sources */,
 				1072883D1E3582CF00FF1FCD /* ViewController.swift in Sources */,
-				10DA05A91E36FCCE00B36889 /* OAuthController+oauthflow.swift in Sources */,
 				10D6E7981E358AB800B2D37D /* RequestFormer+HTTPMethods.swift in Sources */,
 				10D6E79C1E358BD400B2D37D /* RequestFormer+policyAndBody.swift in Sources */,
 				10F87C2B1E35873A0098690B /* BaseNetwork+PublicAPI.swift in Sources */,
@@ -495,7 +488,6 @@
 				10D6E7961E358A1D00B2D37D /* DribbbleAPIBase.swift in Sources */,
 				10F87C2F1E35873A0098690B /* DescriptionBody.swift in Sources */,
 				10F87C3A1E35873A0098690B /* NetworkManager+reachability.swift in Sources */,
-				10DA05AA1E36FCCE00B36889 /* OAuthController+publicmethods.swift in Sources */,
 				10F87C381E35873A0098690B /* NetworkManager+publicPerformRequest.swift in Sources */,
 				10F87C2D1E35873A0098690B /* Comment.swift in Sources */,
 				10F87C3F1E35873A0098690B /* ParseJson+internalMethod.swift in Sources */,
