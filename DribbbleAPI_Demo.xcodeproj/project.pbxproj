@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		101040A81E37005500E61DCB /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101040A71E37005500E61DCB /* ImageCacheManager.swift */; };
 		1072883B1E3582CF00FF1FCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1072883A1E3582CF00FF1FCD /* AppDelegate.swift */; };
 		1072883D1E3582CF00FF1FCD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1072883C1E3582CF00FF1FCD /* ViewController.swift */; };
 		107288401E3582CF00FF1FCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1072883E1E3582CF00FF1FCD /* Main.storyboard */; };
@@ -67,6 +68,7 @@
 
 /* Begin PBXFileReference section */
 		0F71DEA0BAF188B6BDCC1D43 /* Pods-DribbbleAPI_Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DribbbleAPI_Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DribbbleAPI_Demo/Pods-DribbbleAPI_Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		101040A71E37005500E61DCB /* ImageCacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
 		107288371E3582CF00FF1FCD /* DribbbleAPI_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DribbbleAPI_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1072883A1E3582CF00FF1FCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1072883C1E3582CF00FF1FCD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				10D6E79E1E358F8900B2D37D /* NotificationManager.swift */,
+				101040A71E37005500E61DCB /* ImageCacheManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 				10F87C291E35873A0098690B /* AccessTokenAdapter.swift in Sources */,
 				1072883D1E3582CF00FF1FCD /* ViewController.swift in Sources */,
 				10D6E7981E358AB800B2D37D /* RequestFormer+HTTPMethods.swift in Sources */,
+				101040A81E37005500E61DCB /* ImageCacheManager.swift in Sources */,
 				10D6E79C1E358BD400B2D37D /* RequestFormer+policyAndBody.swift in Sources */,
 				10F87C2B1E35873A0098690B /* BaseNetwork+PublicAPI.swift in Sources */,
 				10F87C3C1E35873A0098690B /* NetworkManager.swift in Sources */,
