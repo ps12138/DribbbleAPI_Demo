@@ -21,6 +21,8 @@
 		10D6E79A1E358B3400B2D37D /* RequestFormer+URLform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D6E7991E358B3400B2D37D /* RequestFormer+URLform.swift */; };
 		10D6E79C1E358BD400B2D37D /* RequestFormer+policyAndBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D6E79B1E358BD400B2D37D /* RequestFormer+policyAndBody.swift */; };
 		10D6E79F1E358F8900B2D37D /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D6E79E1E358F8900B2D37D /* NotificationManager.swift */; };
+		10DA05AC1E36FE4500B36889 /* OAuthController+loginFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DA05AB1E36FE4500B36889 /* OAuthController+loginFlow.swift */; };
+		10DA05AE1E36FE6800B36889 /* OAuthController+publicApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DA05AD1E36FE6800B36889 /* OAuthController+publicApi.swift */; };
 		10F87C291E35873A0098690B /* AccessTokenAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F87C0D1E35873A0098690B /* AccessTokenAdapter.swift */; };
 		10F87C2A1E35873A0098690B /* BaseNetwork+InternalMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F87C0E1E35873A0098690B /* BaseNetwork+InternalMethod.swift */; };
 		10F87C2B1E35873A0098690B /* BaseNetwork+PublicAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F87C0F1E35873A0098690B /* BaseNetwork+PublicAPI.swift */; };
@@ -85,6 +87,8 @@
 		10D6E7991E358B3400B2D37D /* RequestFormer+URLform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RequestFormer+URLform.swift"; sourceTree = "<group>"; };
 		10D6E79B1E358BD400B2D37D /* RequestFormer+policyAndBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RequestFormer+policyAndBody.swift"; sourceTree = "<group>"; };
 		10D6E79E1E358F8900B2D37D /* NotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		10DA05AB1E36FE4500B36889 /* OAuthController+loginFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OAuthController+loginFlow.swift"; sourceTree = "<group>"; };
+		10DA05AD1E36FE6800B36889 /* OAuthController+publicApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OAuthController+publicApi.swift"; sourceTree = "<group>"; };
 		10F87C0D1E35873A0098690B /* AccessTokenAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessTokenAdapter.swift; sourceTree = "<group>"; };
 		10F87C0E1E35873A0098690B /* BaseNetwork+InternalMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BaseNetwork+InternalMethod.swift"; sourceTree = "<group>"; };
 		10F87C0F1E35873A0098690B /* BaseNetwork+PublicAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BaseNetwork+PublicAPI.swift"; sourceTree = "<group>"; };
@@ -271,6 +275,8 @@
 				10D6E7991E358B3400B2D37D /* RequestFormer+URLform.swift */,
 				10D6E79B1E358BD400B2D37D /* RequestFormer+policyAndBody.swift */,
 				10812B5A1E36E1860034ECD8 /* OAuthController.swift */,
+				10DA05AB1E36FE4500B36889 /* OAuthController+loginFlow.swift */,
+				10DA05AD1E36FE6800B36889 /* OAuthController+publicApi.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -491,6 +497,7 @@
 				10F87C381E35873A0098690B /* NetworkManager+publicPerformRequest.swift in Sources */,
 				10F87C2D1E35873A0098690B /* Comment.swift in Sources */,
 				10F87C3F1E35873A0098690B /* ParseJson+internalMethod.swift in Sources */,
+				10DA05AE1E36FE6800B36889 /* OAuthController+publicApi.swift in Sources */,
 				10D6E79F1E358F8900B2D37D /* NotificationManager.swift in Sources */,
 				10F87C3D1E35873A0098690B /* KeyChainManager.swift in Sources */,
 				10F87C391E35873A0098690B /* NetworkManager+TestRequest.swift in Sources */,
@@ -505,6 +512,7 @@
 				10D6E79A1E358B3400B2D37D /* RequestFormer+URLform.swift in Sources */,
 				10D6E7941E3589FE00B2D37D /* RequestFormer.swift in Sources */,
 				10F87C3B1E35873A0098690B /* NetworkManager+TokenAPI.swift in Sources */,
+				10DA05AC1E36FE4500B36889 /* OAuthController+loginFlow.swift in Sources */,
 				10F87C321E35873A0098690B /* ShotBlock.swift in Sources */,
 				10F87C411E35873A0098690B /* ParseXML.swift in Sources */,
 				10F87C3E1E35873A0098690B /* NetworkReachability.swift in Sources */,
