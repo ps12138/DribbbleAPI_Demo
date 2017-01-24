@@ -14,6 +14,9 @@
 		107288451E3582CF00FF1FCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 107288431E3582CF00FF1FCD /* LaunchScreen.storyboard */; };
 		107288501E3582CF00FF1FCD /* DribbbleAPI_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1072884F1E3582CF00FF1FCD /* DribbbleAPI_DemoTests.swift */; };
 		1072885B1E3582CF00FF1FCD /* DribbbleAPI_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1072885A1E3582CF00FF1FCD /* DribbbleAPI_DemoUITests.swift */; };
+		10812B5B1E36E1860034ECD8 /* OAuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10812B5A1E36E1860034ECD8 /* OAuthController.swift */; };
+		10812B5D1E36E2A60034ECD8 /* OAuthController+OAuthFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10812B5C1E36E2A60034ECD8 /* OAuthController+OAuthFlow.swift */; };
+		10812B5F1E36E3230034ECD8 /* OAuthController+PublicMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10812B5E1E36E3220034ECD8 /* OAuthController+PublicMethods.swift */; };
 		10D6E7941E3589FE00B2D37D /* RequestFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D6E7931E3589FE00B2D37D /* RequestFormer.swift */; };
 		10D6E7961E358A1D00B2D37D /* DribbbleAPIBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D6E7951E358A1D00B2D37D /* DribbbleAPIBase.swift */; };
 		10D6E7981E358AB800B2D37D /* RequestFormer+HTTPMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D6E7971E358AB800B2D37D /* RequestFormer+HTTPMethods.swift */; };
@@ -31,12 +34,11 @@
 		10F87C311E35873A0098690B /* JsonKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F87C161E35873A0098690B /* JsonKeys.swift */; };
 		10F87C321E35873A0098690B /* ShotBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F87C171E35873A0098690B /* ShotBlock.swift */; };
 		10F87C331E35873A0098690B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F87C181E35873A0098690B /* User.swift */; };
-		10F87C351E35873A0098690B /* NetworkManager+OAuth2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F87C1B1E35873A0098690B /* NetworkManager+OAuth2.swift */; };
 		10F87C361E35873A0098690B /* NetworkManager+publicDataExchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F87C1C1E35873A0098690B /* NetworkManager+publicDataExchange.swift */; };
 		10F87C381E35873A0098690B /* NetworkManager+publicPerformRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F87C1E1E35873A0098690B /* NetworkManager+publicPerformRequest.swift */; };
-		10F87C391E35873A0098690B /* NetworkManager+publicPerformTestRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F87C1F1E35873A0098690B /* NetworkManager+publicPerformTestRequest.swift */; };
-		10F87C3A1E35873A0098690B /* NetworkManager+publicReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F87C201E35873A0098690B /* NetworkManager+publicReachability.swift */; };
-		10F87C3B1E35873A0098690B /* NetworkManager+publicStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F87C211E35873A0098690B /* NetworkManager+publicStatus.swift */; };
+		10F87C391E35873A0098690B /* NetworkManager+TestRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F87C1F1E35873A0098690B /* NetworkManager+TestRequest.swift */; };
+		10F87C3A1E35873A0098690B /* NetworkManager+reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F87C201E35873A0098690B /* NetworkManager+reachability.swift */; };
+		10F87C3B1E35873A0098690B /* NetworkManager+TokenAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F87C211E35873A0098690B /* NetworkManager+TokenAPI.swift */; };
 		10F87C3C1E35873A0098690B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F87C221E35873A0098690B /* NetworkManager.swift */; };
 		10F87C3D1E35873A0098690B /* KeyChainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F87C241E35873A0098690B /* KeyChainManager.swift */; };
 		10F87C3E1E35873A0098690B /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F87C251E35873A0098690B /* NetworkReachability.swift */; };
@@ -78,6 +80,9 @@
 		107288561E3582CF00FF1FCD /* DribbbleAPI_DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DribbbleAPI_DemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1072885A1E3582CF00FF1FCD /* DribbbleAPI_DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DribbbleAPI_DemoUITests.swift; sourceTree = "<group>"; };
 		1072885C1E3582CF00FF1FCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10812B5A1E36E1860034ECD8 /* OAuthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthController.swift; sourceTree = "<group>"; };
+		10812B5C1E36E2A60034ECD8 /* OAuthController+OAuthFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OAuthController+OAuthFlow.swift"; sourceTree = "<group>"; };
+		10812B5E1E36E3220034ECD8 /* OAuthController+PublicMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OAuthController+PublicMethods.swift"; sourceTree = "<group>"; };
 		10D6E7931E3589FE00B2D37D /* RequestFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestFormer.swift; sourceTree = "<group>"; };
 		10D6E7951E358A1D00B2D37D /* DribbbleAPIBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DribbbleAPIBase.swift; sourceTree = "<group>"; };
 		10D6E7971E358AB800B2D37D /* RequestFormer+HTTPMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RequestFormer+HTTPMethods.swift"; sourceTree = "<group>"; };
@@ -95,12 +100,11 @@
 		10F87C161E35873A0098690B /* JsonKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonKeys.swift; sourceTree = "<group>"; };
 		10F87C171E35873A0098690B /* ShotBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotBlock.swift; sourceTree = "<group>"; };
 		10F87C181E35873A0098690B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		10F87C1B1E35873A0098690B /* NetworkManager+OAuth2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NetworkManager+OAuth2.swift"; sourceTree = "<group>"; };
 		10F87C1C1E35873A0098690B /* NetworkManager+publicDataExchange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NetworkManager+publicDataExchange.swift"; sourceTree = "<group>"; };
 		10F87C1E1E35873A0098690B /* NetworkManager+publicPerformRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NetworkManager+publicPerformRequest.swift"; sourceTree = "<group>"; };
-		10F87C1F1E35873A0098690B /* NetworkManager+publicPerformTestRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NetworkManager+publicPerformTestRequest.swift"; sourceTree = "<group>"; };
-		10F87C201E35873A0098690B /* NetworkManager+publicReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NetworkManager+publicReachability.swift"; sourceTree = "<group>"; };
-		10F87C211E35873A0098690B /* NetworkManager+publicStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NetworkManager+publicStatus.swift"; sourceTree = "<group>"; };
+		10F87C1F1E35873A0098690B /* NetworkManager+TestRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NetworkManager+TestRequest.swift"; sourceTree = "<group>"; };
+		10F87C201E35873A0098690B /* NetworkManager+reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NetworkManager+reachability.swift"; sourceTree = "<group>"; };
+		10F87C211E35873A0098690B /* NetworkManager+TokenAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NetworkManager+TokenAPI.swift"; sourceTree = "<group>"; };
 		10F87C221E35873A0098690B /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		10F87C241E35873A0098690B /* KeyChainManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyChainManager.swift; sourceTree = "<group>"; };
 		10F87C251E35873A0098690B /* NetworkReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
@@ -247,12 +251,11 @@
 		10F87C191E35873A0098690B /* NetworkManager */ = {
 			isa = PBXGroup;
 			children = (
-				10F87C1B1E35873A0098690B /* NetworkManager+OAuth2.swift */,
 				10F87C1C1E35873A0098690B /* NetworkManager+publicDataExchange.swift */,
 				10F87C1E1E35873A0098690B /* NetworkManager+publicPerformRequest.swift */,
-				10F87C1F1E35873A0098690B /* NetworkManager+publicPerformTestRequest.swift */,
-				10F87C201E35873A0098690B /* NetworkManager+publicReachability.swift */,
-				10F87C211E35873A0098690B /* NetworkManager+publicStatus.swift */,
+				10F87C1F1E35873A0098690B /* NetworkManager+TestRequest.swift */,
+				10F87C201E35873A0098690B /* NetworkManager+reachability.swift */,
+				10F87C211E35873A0098690B /* NetworkManager+TokenAPI.swift */,
 				10F87C221E35873A0098690B /* NetworkManager.swift */,
 			);
 			path = NetworkManager;
@@ -271,6 +274,9 @@
 				10D6E7971E358AB800B2D37D /* RequestFormer+HTTPMethods.swift */,
 				10D6E7991E358B3400B2D37D /* RequestFormer+URLform.swift */,
 				10D6E79B1E358BD400B2D37D /* RequestFormer+policyAndBody.swift */,
+				10812B5A1E36E1860034ECD8 /* OAuthController.swift */,
+				10812B5C1E36E2A60034ECD8 /* OAuthController+OAuthFlow.swift */,
+				10812B5E1E36E3220034ECD8 /* OAuthController+PublicMethods.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -363,6 +369,7 @@
 				TargetAttributes = {
 					107288361E3582CF00FF1FCD = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = UE4HZRGDJ7;
 						ProvisioningStyle = Automatic;
 					};
 					1072884A1E3582CF00FF1FCD = {
@@ -484,26 +491,28 @@
 				10D6E79C1E358BD400B2D37D /* RequestFormer+policyAndBody.swift in Sources */,
 				10F87C2B1E35873A0098690B /* BaseNetwork+PublicAPI.swift in Sources */,
 				10F87C3C1E35873A0098690B /* NetworkManager.swift in Sources */,
+				10812B5F1E36E3230034ECD8 /* OAuthController+PublicMethods.swift in Sources */,
 				10D6E7961E358A1D00B2D37D /* DribbbleAPIBase.swift in Sources */,
 				10F87C2F1E35873A0098690B /* DescriptionBody.swift in Sources */,
-				10F87C3A1E35873A0098690B /* NetworkManager+publicReachability.swift in Sources */,
+				10F87C3A1E35873A0098690B /* NetworkManager+reachability.swift in Sources */,
 				10F87C381E35873A0098690B /* NetworkManager+publicPerformRequest.swift in Sources */,
 				10F87C2D1E35873A0098690B /* Comment.swift in Sources */,
 				10F87C3F1E35873A0098690B /* ParseJson+internalMethod.swift in Sources */,
 				10D6E79F1E358F8900B2D37D /* NotificationManager.swift in Sources */,
 				10F87C3D1E35873A0098690B /* KeyChainManager.swift in Sources */,
-				10F87C391E35873A0098690B /* NetworkManager+publicPerformTestRequest.swift in Sources */,
+				10F87C391E35873A0098690B /* NetworkManager+TestRequest.swift in Sources */,
 				10F87C2C1E35873A0098690B /* BaseNetwork.swift in Sources */,
 				10F87C2E1E35873A0098690B /* CommentBody.swift in Sources */,
 				10F87C2A1E35873A0098690B /* BaseNetwork+InternalMethod.swift in Sources */,
 				1072883B1E3582CF00FF1FCD /* AppDelegate.swift in Sources */,
-				10F87C351E35873A0098690B /* NetworkManager+OAuth2.swift in Sources */,
+				10812B5B1E36E1860034ECD8 /* OAuthController.swift in Sources */,
+				10812B5D1E36E2A60034ECD8 /* OAuthController+OAuthFlow.swift in Sources */,
 				10F87C301E35873A0098690B /* ImageBlock.swift in Sources */,
 				10F87C311E35873A0098690B /* JsonKeys.swift in Sources */,
 				10F87C361E35873A0098690B /* NetworkManager+publicDataExchange.swift in Sources */,
 				10D6E79A1E358B3400B2D37D /* RequestFormer+URLform.swift in Sources */,
 				10D6E7941E3589FE00B2D37D /* RequestFormer.swift in Sources */,
-				10F87C3B1E35873A0098690B /* NetworkManager+publicStatus.swift in Sources */,
+				10F87C3B1E35873A0098690B /* NetworkManager+TokenAPI.swift in Sources */,
 				10F87C321E35873A0098690B /* ShotBlock.swift in Sources */,
 				10F87C411E35873A0098690B /* ParseXML.swift in Sources */,
 				10F87C3E1E35873A0098690B /* NetworkReachability.swift in Sources */,
@@ -658,6 +667,7 @@
 			baseConfigurationReference = 0F71DEA0BAF188B6BDCC1D43 /* Pods-DribbbleAPI_Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = UE4HZRGDJ7;
 				INFOPLIST_FILE = DribbbleAPI_Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "PSL.DribbbleAPI-Demo";
@@ -671,6 +681,7 @@
 			baseConfigurationReference = 893C61B9997BB62F59F9378E /* Pods-DribbbleAPI_Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = UE4HZRGDJ7;
 				INFOPLIST_FILE = DribbbleAPI_Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "PSL.DribbbleAPI-Demo";

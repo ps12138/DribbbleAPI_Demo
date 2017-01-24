@@ -23,6 +23,8 @@ public class NotificationManager {
         static let kSafariViewControllerCloseNotification =
             NSNotification.Name(rawValue: "kSafariViewControllerCloseNotification")
         static let kAccessTokenEvent = NSNotification.Name(rawValue: "kAccessTokenEvent")
+        
+        //static let kUpdateAccessToken = NSNotification.Name(rawValue: "kUpdateAccessToken")
     }
     
     // MARK: - addObserver
@@ -51,6 +53,8 @@ public class NotificationManager {
             object: object
         )
     }
+    
+    
     
     // MARK: - delObserver
     public func removeObserver(

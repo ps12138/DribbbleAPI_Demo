@@ -19,7 +19,7 @@ extension NetworkManager {
     
     // MARK: - Network Reachability Manager
     public func startReachListener() {
-        let urlString = Constants.apiBase
+        let urlString = Constants.reachToDribble
         baseNetwork.startReachListener(
             host: urlString,
             callBack: handleNetworkStatus

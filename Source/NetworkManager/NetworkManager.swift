@@ -12,27 +12,21 @@ import Foundation
 public class NetworkManager {
     // MARK: - singleton
     static let sharedInstance = NetworkManager()
-    private init () {}
+    private init () {
+        oauthController.delegate = self
+    }
     
     // MARK: - create alamofire session manager
     internal let baseNetwork = BaseNetwork()
+    internal let oauthController = OAuthController()
     internal let parseJson = ParseJson()
     
-    // net status
+    /// Net status
     internal var networkStatusInternal: NetworkReachability = NetworkReachability.unknown
     
-    // MARK: Key related
-    internal struct KeyChainUserAccount {
-        static let OAuth2AccessToken = "dribbble_oauth2"
-        
-    }
-    
+    // MARK: - Constants
     internal struct Constants {
-        static let markRequestingToken = "loadingOAuthToken"
-        static let apiBase = "https://api.dribbble.com"
-    }
-    // MARK: - public key
-    internal struct Scheme {
-        static let callBackPrefix = "driapicallback"
+        static let reachToDribble = "https://api.dribbble.com"
+        static let reachToGoogle = "https://www.google.com"
     }
 }
